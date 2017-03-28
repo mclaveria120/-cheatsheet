@@ -24,7 +24,7 @@
 
 # Tomcat 
 
-```  <Connector port="9443" protocol="HTTP/1.1" SSLEnabled="true"
+```<Connector port="9443" protocol="HTTP/1.1" SSLEnabled="true"
                maxThreads="150" scheme="https" secure="true"
                keystoreFile="myKeyStore"
                keystorePass="password"
@@ -43,5 +43,5 @@
 * sudo iptables -L -vt nat
 * sudo iptables -t nat -D PREROUTING 4
 * sudo iptables -D INPUT 4
-
+ 
 
