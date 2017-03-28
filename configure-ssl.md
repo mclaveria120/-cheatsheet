@@ -19,12 +19,13 @@
  * keytool -import --alias root -trustcacerts -file root.crt  -keystore myKeyStore
  * keytool -import --alias inter1 -trustcacerts -file inter1.crt  -keystore myKeyStore
  * keytool -import --alias inter2 -trustcacerts -file inter2.crt  -keystore myKeyStore 
- * keytool -import --alias tomcat   -trustcacerts -filemyCertificate.crt  -keystore myKeyStore
+ * keytool -import --alias tomcat   -trustcacerts -file myCertificate.crt  -keystore myKeyStore
 
 
 # Tomcat 
 
-```<Connector port="9443" protocol="HTTP/1.1" SSLEnabled="true"
+```
+<Connector port="9443" protocol="HTTP/1.1" SSLEnabled="true"
                maxThreads="150" scheme="https" secure="true"
                keystoreFile="myKeyStore"
                keystorePass="password"
