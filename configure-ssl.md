@@ -33,6 +33,15 @@
                clientAuth="false" sslProtocol="TLS" />
 ```
 
+
+# GET PRIVATE KEY FROM KEYSTORE
+* keytool -importkeystore -srckeystore myKeyStore.jks -destkeystore myKeyStore.p12 -deststoretype PKCS12
+* openssl pkcs12 -in myKeyStore.p12
+ * Export the certificate: 
+    - openssl pkcs12 -in myKeyStore.p12 -nokeys -out cert.pem
+ * Export the private key (unencrypted)
+    - openssl pkcs12 -in myKeyStore.p12  -nodes -nocerts -out privateKey.pem
+
 # IPTABLES
 * sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 9443
 * sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
